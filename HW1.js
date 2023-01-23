@@ -128,24 +128,27 @@ console.log(noVowels); //
 //     Наприклад: 1000 метрів це 1 кілометр;  32 метри це 0,02 кілометра; 3 кілометри і т.д.
 
 //     Відмінювання для "метр" (аналогічні закінчення будуть і для слова "кілометр")
-let metrNum = "5001";
+let metrNum = "11000";
 let kmNum = Number(metrNum)/1000;
 
 
-if ( /1$/.test(metrNum) ) {
+if (/11$/.test(metrNum)||/12$/.test(metrNum)||/13$/.test(metrNum)||/14$/.test(metrNum)||/15$/.test(metrNum)||/16$/.test(metrNum)||/17$/.test(metrNum)
+||/18$/.test(metrNum)||/19$/.test(metrNum)) {
+    console.log(`${metrNum} метрів це ${kmNum} кілометра`)
+} else if(/1$/.test(metrNum) ) {
     console.log(`${metrNum} метр це ${kmNum} кілометра`)
 } else if (/2$/.test(metrNum)||/3$/.test(metrNum)||/4$/.test(metrNum)) {
-    console.log(`${metrNum} метра це ${kmNum} кілометра`)
-} 
-else if (/1000$/.test(metrNum)) {
-    console.log(`${metrNum} метрів це ${kmNum} кілометр`)
-} 
-else if (/5000$/.test(metrNum)||/6000$/.test(metrNum)||/7000$/.test(metrNum)||/8000$/.test(metrNum)||/5000$/.test(metrNum)||/10000$/.test(metrNum)) {
+    console.log(`${metrNum} метри це ${kmNum} кілометра`)
+} else if (/5000$/.test(metrNum)||/6000$/.test(metrNum)||/7000$/.test(metrNum)||/8000$/.test(metrNum)||/5000$/.test(metrNum)||/10000$/.test(metrNum)
+||/11000$/.test(metrNum)||/12000$/.test(metrNum)||/13000$/.test(metrNum)||/14000$/.test(metrNum)||/0000$/.test(metrNum)||/00000$/.test(metrNum)) {
     console.log(`${metrNum} метрів це ${kmNum} кілометрів`)
-}
-else if (/5$/.test(metrNum)||/6$/.test(metrNum)||/7$/.test(metrNum)||/8$/.test(metrNum)||/9$/.test(metrNum)||/0$/.test(metrNum)
+} else if (/1000$/.test(metrNum)) {
+    console.log(`${metrNum} метрів це ${kmNum} кілометр`)
+} else if(/2000$/.test(metrNum)||/3000$/.test(metrNum)||/4000$/.test(metrNum)) {
+    console.log(`${metrNum} метрів це ${kmNum} кілометри`)
+} else if (/5$/.test(metrNum)||/6$/.test(metrNum)||/7$/.test(metrNum)||/8$/.test(metrNum)||/9$/.test(metrNum)||/0$/.test(metrNum)
 ||/10$/.test(metrNum)||/20$/.test(metrNum)||/30$/.test(metrNum)||/40$/.test(metrNum)||/50$/.test(metrNum)||/60$/.test(metrNum)
-||/70$/.test(metrNum)||/80$/.test(metrNum)||/90$/.test(metrNum)||/100$/.test(metrNum)) {
+||/70$/.test(metrNum)||/80$/.test(metrNum)||/90$/.test(metrNum)||/00$/.test(metrNum)) {
     console.log(`${metrNum} метрів це ${kmNum} кілометра`)
 } else {
     console.log("This isn't a number!!!")
